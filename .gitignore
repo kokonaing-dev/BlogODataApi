@@ -4,17 +4,16 @@ obj/
 .vs/
 *.user
 *.suo
+*.db
+*.log
 
 # Rider
 .idea/
 
-# Dotnet Core
-*.db
-*.log
-
 # Secrets
 appsettings.Development.json
 appsettings.*.Local.json
+.env
 
-# Docker volumes
+# Docker
 postgres-data/
