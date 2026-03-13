@@ -7,8 +7,10 @@ using Microsoft.OData.Edm;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionString = builder.Configuration.GetConnectionString("Default")
+                       ?? Environment.GetEnvironmentVariable("ConnectionStrings__Default");
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+    options.UseNpgsql(connectionString));
 
 builder.Services.AddControllers()
     .AddOData(options => options
