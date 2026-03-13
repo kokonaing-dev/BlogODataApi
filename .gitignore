@@ -1,11 +1,20 @@
+# Visual Studio / .NET
 bin/
 obj/
+.vs/
 *.user
 *.suo
-*.DS_Store
-.vs/
+
+# Rider
+.idea/
+
+# Dotnet Core
 *.db
 *.log
-appsettings.*.json
 
-.idea/
+# Secrets
+appsettings.Development.json
+appsettings.*.Local.json
+
+# Docker volumes
+postgres-data/
